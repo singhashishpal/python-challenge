@@ -49,7 +49,7 @@ with open(file_path) as csvfile:
                 smallest_pl_change = pl_change
                 date_of_greatest_dec = row[0]   # This will store date of Greatest Decrease in Profits
 
-        previous_pl = current_pl
+        previous_pl = current_pl                # reading the last row of the dataset
 
 
     # Calculate the average change in profit/loss
@@ -66,7 +66,7 @@ with open(file_path) as csvfile:
 
 
 # Writing the output to the file
-desired_output_path = '../Analysis'                     # setting up the desired path as one folder up from cwd and then analysis folder.
+desired_output_path = '../analysis'                     # setting up the desired path as one folder up from cwd and then analysis folder.
 os.chdir(desired_output_path)
 path = os.getcwd()
 output_file_path = os.path.join(path, 'analysis.txt')
